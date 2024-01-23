@@ -4,4 +4,4 @@ Test
 
 # Play online
 
-https://juanmoralesdev.github.io/river/?disk=game.dsk&M=MSX2E
+https://juanmoralesdev.github.io/river/?disk=river2.dsk&M=MSX2E
