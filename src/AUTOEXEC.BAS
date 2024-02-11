@@ -1,2 +1,2 @@
-10 BLOAD"xbasic.bin",R:RUN"river.bas"
+10 BLOAD"xbasic.bin",R:RUN"river3.bas"
 
