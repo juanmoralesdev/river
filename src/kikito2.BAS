@@ -205,7 +205,7 @@
     14185 NEXT I
 14190 return
 
-1 '1 'Rutina escribir en VRAM el mapa de las pantallas con 2 caraceres
+1 '1 'Rutina escribir en VRAM el mapa de las pantallas con 2 caraceres y número de repeticiones al principio para la compresión RLE
 1 '    14110 md=6144
 1 '    14130 FOR I=0 TO 7:READ mp$
 1 '        14140 for c=0 to len(mp$)-1 step 4
