@@ -195,6 +195,7 @@
 
 1 'Rutina escribir en VRAM el mapa de las pantallas con 2 caraceres
     14110 md=6144
+    1 'I=iteración, mp$=mapa string, md=mapa dirección, c=columna, c$=valor columna en String, mid$()=extrae 1 trozo de texto, val()=obtiene un valor a partir de 1 string, va=valor
     14130 FOR I=0 TO 7:READ mp$
         14140 for c=0 to len(mp$)-1 step 2
             14150 c$=mid$(mp$,c+1,2)
@@ -203,6 +204,25 @@
         14180 next c
     14185 NEXT I
 14190 return
+
+1 '1 'Rutina escribir en VRAM el mapa de las pantallas con 2 caraceres
+1 '    14110 md=6144
+1 '    14130 FOR I=0 TO 7:READ mp$
+1 '        14140 for c=0 to len(mp$)-1 step 4
+1 '            1 ' los 2 primero dígitos serán el número d erepeticiones en string=r$
+1 '            14150 r$=mid$(mp$,c+1,2)
+1 '            1 'Los 2 dígitos siguientes será el valor del tile=tn$, tile número en string
+1 '            14160 tn$=mid$(mp$,c+3,2)
+1 '            1 'sacamos el valor de tile en entero
+1 '            14170 tn=val("&h"+tn$)
+1 '            1 'Sacamos el valor de las repeticiones en entero
+1 '            14180 re=val("&h"+r$)
+1 '            14182 for x=0 to re
+1 '                14184 vpoke md,tn:md=md+1
+1 '            14186 next x
+1 '        14188 next c
+1 '    14190 NEXT I
+1 '14195 return
 
 1 '1 'Rutina escribir en VRAM el mapa de las pantallas con 1 caracter
 1 '    14110 md=6144
@@ -272,6 +292,16 @@
 15060 DATA 0000000000000000000000000000000000000000000000000000000000000000
 15070 DATA 0000000000000000000000000000000000000000000000000000000000000000
 
+1 '1 'Menu con RLE
+1 '15000 DATA 1f00
+1 '15010 DATA 000d0110000d0210000d0110000d0210000d0110010d0010000d0010000d0010000d0110000d0110010d
+1 '15020 DATA 000d0010010d0010000d0010000d0010020d0010010d0010000d0010000d0010000d0010000d0010000d0010010d0010000d0010000d
+1 '15030 DATA 000d010f000d020f000d010f010d000f010d010f010d000f000d000f000d000f000d010f000d010f010d
+1 '15040 DATA 000d000f010d000f000d000f010d000f010d000f010d000f000d000f000d000f000d000f000d000f000d000f010d000f000d000f000d
+1 '15050 DATA 000d000e010d000e000d000e000d010e010d000e010d000e000d000e000d000e010d000e010d010e000d000e000d000e000d
+1 '15060 DATA 1f00
+1 '15070 DATA 1f00
+
 1 '1 'Menu con 1 caracter
 1 '15000 DATA 00000000000000000000000000000000
 1 '15010 DATA d00d000d00d000d00dd0d0d0d00d00dd
@@ -291,6 +321,18 @@
 15150 DATA 00000a0c0c0c0c0c0c0c0f0c0c0c0c0c0c0c0b0a0c0c0c0c0c0c0c0b00000000
 15160 DATA 000d0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0e000000
 15170 DATA 1010101010101010101010101010101010101010101010101010101010101010
+
+1 '1 'pantalla 1 con RLE 
+1 '15100 DATA 1f00
+1 '15110 DATA 0000000100020200000306000003010000010002030000030400000100020000
+1 '15120 DATA 0400000700080009010000010002000000070008000905000007000800090000000100020300
+1 '15130 DATA 0300000a000400050006000b0200000a000400050006000b0000000100020000000a00040106000b0500
+1 '15140 DATA 0200000a040c000b0000000a040c000b0100000a040c000b0400
+1 '15150 DATA 0100000a060c000f060c000b000a060c000b0300
+1 '15160 DATA 0000000d190c000e0200
+1 '15170 DATA 1f10
+
+
 
 
 1 '1 'pantalla 1 con 1 caracter
